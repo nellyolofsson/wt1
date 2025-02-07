@@ -1,0 +1,25 @@
+<h2>Groups with projects</h2>
+
+<% for (const group of user.nodes) { %>
+    <h2><a href="<%= group.webUrl %>"><%= group.name %></a></h2>
+    <p><%= group.fullPath %></p>
+    <% if (group.parent.projects.nodes.length > 0) { %>
+       
+    <table class="table" >
+        <tr>
+            <th>Projects</th>
+            <th>Last Commit</th>
+        </tr>
+        <% for (const project of group.parent.projects.nodes) { %>
+            <tr>
+                <td><a href="<%= project.webUrl %>"><%= project.name %></a></td>
+                <td><%= project.repository.tree.lastCommit.committedDate %></td>
+                <td><%= project.repository.tree.lastCommit.authorName %></td>
+                <td><img src="<%= project.repository.tree.lastCommit.authorGravatar %>" alt="Gravatar" width="80" height="80"></td>
+            </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+        <p>There are no projects to display.</p>
+        <% } %>
+<% } %>

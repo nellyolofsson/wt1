@@ -1,0 +1,43 @@
+<h1>Activities</h1>
+
+<% if (user.length > 0) { %>
+  <table class="activities-table">
+    <thead>
+      <tr>
+        <th>Action Name</th>
+        <th>Created At</th>
+        <th>Target Title</th>
+        <th>Target Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% user.forEach(event => { %>
+        <tr>
+          <td class="td-spacing"><%= event.action_name %></td>
+          <td class="td-spacing"><%= event.created_at %></td>
+          <td class="td-spacing"><%= event.target_title %></td> 
+          <td class="td-spacing"><%= event.target_type %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <% if (totalPages > 1) { %>
+    <div class="page">
+      <% if (currentPage > 1) { %>
+        <a class="previous-page" href="./login/activities/?page=<%= currentPage - 1 %>">Previous</a>
+      <% } %>
+
+      <span>Page <%= currentPage %> of <%= totalPages %></span>
+
+      <% if (currentPage < totalPages) { %>
+        <a class="next-page" href="./login/activities/?page=<%= currentPage + 1 %>">Next</a>
+      <% } %>
+    </div>
+  <% } %>
+<% } else { %>
+  <p>No activities to display.</p>
+<% } %>
+
+
+

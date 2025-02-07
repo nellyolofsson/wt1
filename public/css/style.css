@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2ebeb;
+    color: #050505;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.nav-link-button {
+    border: none;
+    background: none;
+    display: block;
+    margin: 8px; 
+ 
+}
+
+.td-spacing {
+    padding: 10px; 
+    border: 1px solid #ddd;
+    background-color: #f2f2f2; 
+  }
+
+.activities-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activities-table th, .activity-table td {
+    border: 1px solid #ddd; /* Add borders around cells */
+    padding: 8px; /* Add padding to cells */
+    background-color: #f2f2f2;
+  }
+
+  .page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .next-page,
+  .previous-page {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: none;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+  }
+
+  .profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+  }
+  
+  .profile-table th, .profile-table td {
+    border: 1px solid #ddd; /* Add borders around cells */
+    padding: 8px; /* Add padding to cells */
+  }
+  
+
+
+  
+
+
+

@@ -1,0 +1,25 @@
+<h2>Profile</h2>
+
+<table class="profile-table">
+    <thead>
+        <tr>
+          <th>GitLab ID</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Last Activity</th>
+          <th>Avatar</th>
+        </tr>
+      </thead>
+  <tr>
+    <td><%= userid %></td>
+    <td><%= user.email %></td>
+    <td><%= user.name %></td>
+    <td><%= user.username %></td>
+    <td><%= user.lastActivityOn %></td>
+    <td><img src="<%= user.avatarUrl %>" alt="Avatar"></td>
+  </tr>
+</table>
+
+
+
